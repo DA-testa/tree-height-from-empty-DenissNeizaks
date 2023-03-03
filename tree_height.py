@@ -8,20 +8,41 @@ import numpy
 def compute_height(n, parents):
     # Write this function
     max_height = 0
+    compare = []
+    for i in range (0,n,1):
+        if (compare.count(parents[i]) >0):
+            next
+            
+        else:
+            compare.append(parents[i])
+            max_height+=1
+ 
+        
     # Your code here
     return max_height
 
 
 def main():
-    # implement input form keyboard and from files
+    input_method = input()
+    print(100)
+    if input_method == i:
+        number_amount = int(input())
+        print(101)
+        numbers = str(input())
+        split_numbers = numbers.split()
+        maximum = (compute_height(number_amount,split_numbers))
+        print (maximum)
+        # implement input form keyboard and from files
     
-    # let user input file name to use, don't allow file names with letter a
-    # account for github input inprecision
+        # let user input file name to use, don't allow file names with letter a
+        # account for github input inprecision
     
-    # input number of elements
-    # input values in one variable, separate with space, split these values in an array
-    # call the function and output it's result
-    pass
+        # input number of elements
+        # input values in one variable, separate with space, split these values in an array
+        # call the function and output it's result
+        pass
+ 
+    
 
 # In Python, the default limit on recursion depth is rather low,
 # so raise it here for this problem. Note that to take advantage
