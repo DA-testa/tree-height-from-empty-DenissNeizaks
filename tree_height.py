@@ -3,9 +3,10 @@
 
 import numpy
 
-print (3)
+
 
 def compute_height(n, parents):
+    print(3)
     # Write this function
     max_height = 0
     for i in range (0, n,1):
