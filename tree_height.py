@@ -33,7 +33,7 @@ def main():
         number_amount = int(input())
 
         numbers = str(input())
-        split_numbers = numbers.split()
+        split_numbers = numpy.array(numbers.split())
         maximum = (compute_height(number_amount,split_numbers))
         print (maximum)
         # implement input form keyboard and from files
@@ -48,11 +48,11 @@ def main():
     
     elif input_method == 'F':
         file = input()
-        file = ("tree-height-from-empty-DenissNeizaks/test/" + file)
+        file = ("test/" + file)
         with open(file,'r') as f:
             number_amount = int(f.readline())
             numbers = str(f.readline())
-            split_numbers = numbers.split()
+            split_numbers = numpy.array(numbers.split())
             maximum = (compute_height(number_amount,split_numbers))
             print (maximum)
             
