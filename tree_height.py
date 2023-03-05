@@ -28,9 +28,10 @@ def compute_height(n, parents):
 
 
 def main():
-    print (3)
+
     input_method = input()
-    
+    print (3)
+    print (input_method)
     if input_method == "I":
         number_amount = int(input())
 
