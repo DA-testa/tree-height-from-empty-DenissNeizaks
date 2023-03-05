@@ -1,79 +1,44 @@
 # python3
 
 
+
+
 import numpy
 
 
 
 def compute_height(n, parents):
-    masivs1 = []
-
-    for i in range (n):
-        masivs1.append(0)
-    masivs2 = masivs1
-    counter = 0
-
-
-
     # Write this function
     max_height = 0
     for i in range (0, n,1):
-
-#and parents[i]!=parents[i-1]
-            
-        if (masivs2[i] == 0):
-            counter+=1
-
-            masivs2[i] = 1
-            masivs3 = []
-            masivs3.append(i)
-            value = int(parents[i])
-
-            
-  
-        
+        current_height = 0
+        value = int(parents[i])
+        if value != -1:
             while (True):
-                
-                masivs3.append(value)
-
-                if value != -1:
-                    
-                    masivs2[value] = 1
-                    value = int(parents[value])
-
-
-                    for j in range (len(masivs3)):
-
-                        masivs1[masivs3[j]] +=1
-
-                else:
+                value = int(parents[value])
+                if value == -1:
                     break
-        
-
-    print (counter , "ppp")
-
-                
-                
+                current_height+=1
             
-        
-    max_height = max(masivs1)
+        if current_height > max_height:
+            max_height = current_height
 
         
     # Your code here
-    return max_height
+    return max_height + 2
 
 
 def main():
-
     input_method = input()
-    if "I" in input_method:
+    
+    if input_method == 'I':
         number_amount = int(input())
 
         numbers = str(input())
+
         split_numbers = numpy.array(numbers.split())
         maximum = (compute_height(number_amount,split_numbers))
         print (maximum)
-
         # implement input form keyboard and from files
     
         # let user input file name to use, don't allow file names with letter a
@@ -84,20 +49,17 @@ def main():
         # call the function and output it's result
         pass
     
-    elif "F" in input_method:
-
+    elif input_method == "F":
         file = input()
         file = ("test/" + file)
         with open(file,'r') as f:
-            number_amount = int(f.readline().strip())
-            numbers = f.readline()
+            number_amount = int(f.readline())
+            numbers = str(f.readline())
             split_numbers = numbers.split()
-
             maximum = (compute_height(number_amount,split_numbers))
             print (maximum)
-
-
             
+        f.close()
 
  
     
