@@ -29,10 +29,8 @@ def compute_height(n, parents):
 
 def main():
     input_method = input()
-    print("Ievadita metode")
     if input_method == 'i':
         number_amount = int(input())
-        print("Ievadits skaitlu daudzums")
         numbers = str(input())
         split_numbers = numbers.split()
         maximum = (compute_height(number_amount,split_numbers))
