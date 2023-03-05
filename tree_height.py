@@ -6,7 +6,7 @@ import numpy
 
 
 def compute_height(n, parents):
-    print(3)
+
     # Write this function
     max_height = 0
     for i in range (0, n,1):
@@ -28,6 +28,7 @@ def compute_height(n, parents):
 
 
 def main():
+    print (3)
     input_method = input()
     
     if input_method == "I":
