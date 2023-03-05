@@ -48,7 +48,7 @@ def main():
     
     elif input_method == 'F':
         file = input()
-        file = ("test/" + file)
+        file = ("tree-height-from-empty-DenissNeizaks/test/" + file)
         with open(file,'r') as f:
             number_amount = int(f.readline())
             numbers = str(f.readline())
