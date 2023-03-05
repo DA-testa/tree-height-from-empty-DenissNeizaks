@@ -3,7 +3,7 @@
 
 import numpy
 
-
+print (3)
 
 def compute_height(n, parents):
     # Write this function
