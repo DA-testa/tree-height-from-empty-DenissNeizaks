@@ -29,7 +29,7 @@ def compute_height(n, parents):
 def main():
     input_method = input()
     
-    if input_method == 'i':
+    if input_method == 'I':
         number_amount = int(input())
 
         numbers = str(input())
@@ -46,7 +46,7 @@ def main():
         # call the function and output it's result
         pass
     
-    elif input_method == 'f':
+    elif input_method == 'F':
         file = input()
         with open(file,'r') as f:
             number_amount = int(f.readline())
