@@ -29,7 +29,7 @@ def compute_height(n, parents):
 def main():
     input_method = input()
     
-    if "I\r" in input_method:
+    if input_method == "I":
         number_amount = int(input())
 
         numbers = str(input())
@@ -46,13 +46,13 @@ def main():
         # call the function and output it's result
         pass
     
-    elif "F\r" in input_method:
+    elif input_method == "F":
         file = input()
         file = ("test/" + file)
         with open(file,'r') as f:
-            number_amount = int(f.readline())
-            numbers = str(f.readline())
-            split_numbers = numpy.array(numbers.split())
+            number_amount = int(f.readline().strip())
+            numbers = list(map(int, f.readline().strip.split()))
+
             maximum = (compute_height(number_amount,split_numbers))
             print (maximum)
             
