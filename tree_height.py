@@ -6,25 +6,35 @@ import numpy
 
 
 def compute_height(n, parents):
+    masivs1 = []
+    masivs2 = []
+    for i in range (n):
+        masivs1.append(0)
+        masivs2.append(0)   
+
 
     # Write this function
     max_height = 0
     for i in range (0, n,1):
-        current_height = 0
-        value = int(parents[i])
-        if value != -1:
+        if (masivs2[i] == 0):
+            masivs2[i] = 1
+            value = int(parents[i])
+        
             while (True):
-                value = int(parents[value])
-                if value == -1:
+                if value != -1:
+                    value = int(parents[value])
+                    masivs1[i] +=1
+                else:
                     break
-                current_height+=1
+        
+                
             
-        if current_height > max_height:
-            max_height = current_height
+        
+    max_height = max(masivs1)
 
         
     # Your code here
-    return max_height + 2
+    return max_height + 1
 
 
 def main():
@@ -37,6 +47,7 @@ def main():
         split_numbers = numpy.array(numbers.split())
         maximum = (compute_height(number_amount,split_numbers))
         print (maximum)
+
         # implement input form keyboard and from files
     
         # let user input file name to use, don't allow file names with letter a
@@ -58,6 +69,7 @@ def main():
 
             maximum = (compute_height(number_amount,split_numbers))
             print (maximum)
+
     else:
         print("Else")
             
