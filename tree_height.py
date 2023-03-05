@@ -37,7 +37,6 @@ def main():
         split_numbers = numpy.array(numbers.split())
         maximum = (compute_height(number_amount,split_numbers))
         print (maximum)
-        print (3)
         # implement input form keyboard and from files
     
         # let user input file name to use, don't allow file names with letter a
@@ -59,7 +58,6 @@ def main():
 
             maximum = (compute_height(number_amount,split_numbers))
             print (maximum)
-            print (3)
     else:
         print("Else")
             
