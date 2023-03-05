@@ -7,7 +7,6 @@ import numpy
 
 def compute_height(n, parents):
     masivs1 = []
-    masivs3 = []
 
     for i in range (n):
         masivs1.append(0)
@@ -19,7 +18,9 @@ def compute_height(n, parents):
     # Write this function
     max_height = 0
     for i in range (0, n,1):
-        
+
+#and parents[i]!=parents[i-1]
+            
         if (masivs2[i] == 0):
             counter+=1
 
@@ -36,6 +37,7 @@ def compute_height(n, parents):
                 masivs3.append(value)
 
                 if value != -1:
+                    
                     masivs2[value] = 1
                     value = int(parents[value])
 
@@ -94,8 +96,7 @@ def main():
             maximum = (compute_height(number_amount,split_numbers))
             print (maximum)
 
-    else:
-        print("Else")
+
             
 
  
@@ -106,4 +107,5 @@ def main():
 # of bigger stack, we have to launch the computation in a new thread.
 
 main()
+
 # print(numpy.array([1,2,3]))
