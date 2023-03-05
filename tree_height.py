@@ -3,14 +3,13 @@
 
 
 
-import numpy
 
 
 
 def compute_height(n, parents):
     # Write this function
     max_height = 0
-    for i in range (0, n,1):
+    for i in range (n):
         current_height = 0
         value = int(parents[i])
         if value != -1:
