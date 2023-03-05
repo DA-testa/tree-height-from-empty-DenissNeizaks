@@ -8,38 +8,49 @@ import numpy
 def compute_height(n, parents):
     masivs1 = []
     masivs3 = []
-    masivs_empty = []
+
     for i in range (n):
         masivs1.append(0)
-        masivs_empty.append(-2)
     masivs2 = masivs1
+    counter = 0
+
 
 
     # Write this function
     max_height = 0
     for i in range (0, n,1):
-        if (masivs2[i] != 1):
+        
+        if (masivs2[i] == 0):
+            counter+=1
+
             masivs2[i] = 1
-            value = int(parents[i])
             masivs3 = []
-            counter = 0
+            masivs3.append(i)
+            value = int(parents[i])
+
+            
+  
         
             while (True):
                 
                 masivs3.append(value)
-                counter+=1
+
                 if value != -1:
                     masivs2[value] = 1
                     value = int(parents[value])
 
 
                     for j in range (len(masivs3)):
-                        if masivs3[j] != 0:
-                            masivs1[masivs3[j]] +=1
+
+                        masivs1[masivs3[j]] +=1
 
                 else:
                     break
         
+
+    print (counter , "ppp")
+
+                
                 
             
         
