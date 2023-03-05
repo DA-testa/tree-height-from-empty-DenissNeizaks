@@ -51,12 +51,13 @@ def main():
         file = ("test/" + file)
         with open(file,'r') as f:
             number_amount = int(f.readline().strip())
-            numbers = list(map(int, f.readline().strip.split()))
+            numbers = f.readline()
+            split_numbers = numbers.split()
 
             maximum = (compute_height(number_amount,split_numbers))
             print (maximum)
             
-        f.close()
+
  
     
 
