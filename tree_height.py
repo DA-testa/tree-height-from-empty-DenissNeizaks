@@ -56,6 +56,7 @@ def main():
 
             maximum = (compute_height(number_amount,split_numbers))
             print (maximum)
+            print (3)
             
 
  
