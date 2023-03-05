@@ -5,29 +5,34 @@ import threading
 import numpy
 
 
+
 def compute_height(n, parents):
     # Write this function
     max_height = 0
-    compare = []
-    for i in range (0,n,1):
-        if (compare.count(parents[i]) >0):
-            next
+    for i in range (0, n,1):
+        current_height = 0
+        value = int(parents[i])
+        if value != -1:
+            while (True):
+                value = int(parents[value])
+                if value == -1:
+                    break
+                current_height+=1
             
-        else:
-            compare.append(parents[i])
-            max_height+=1
- 
+        if current_height > max_height:
+            max_height = current_height
+
         
     # Your code here
-    return max_height
+    return max_height + 2
 
 
 def main():
     input_method = input()
-    print(100)
-    if input_method == i:
+    print("Ievadita metode")
+    if input_method == 'i':
         number_amount = int(input())
-        print(101)
+        print("Ievadits skaitlu daudzums")
         numbers = str(input())
         split_numbers = numbers.split()
         maximum = (compute_height(number_amount,split_numbers))
