@@ -31,7 +31,6 @@ def main():
 
     input_method = input()
     if input_method == "I":
-        print (3)
         number_amount = int(input())
 
         numbers = str(input())
@@ -50,7 +49,7 @@ def main():
         pass
     
     elif input_method == "F":
-        print(4)
+
         file = input()
         file = ("test/" + file)
         with open(file,'r') as f:
@@ -61,6 +60,8 @@ def main():
             maximum = (compute_height(number_amount,split_numbers))
             print (maximum)
             print (3)
+    else:
+        print("Else")
             
 
  
