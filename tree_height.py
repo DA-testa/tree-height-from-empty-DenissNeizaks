@@ -1,9 +1,6 @@
 # python3
 
-
-
-
-
+import numpy
 
 
 def compute_height(n, parents):
